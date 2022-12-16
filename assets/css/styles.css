@@ -1,4 +1,12 @@
 /******************************** BASIC STYLES ********************************/
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('../fonts/Dancing-Script/DancingScript-VariableFont.ttf')
+    format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
 :root {
   --red: #dc3041;
   --green: #20e26e;
@@ -36,7 +44,7 @@ p {
 
 /******************************** BUTTON ********************************/
 .btn {
-  font-family: "Dancing Script", cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 1.44rem;
   cursor: pointer;
   transition: all 0.5s;
