@@ -1,6 +1,6 @@
 .success {
   display: none;
-  font-size: 1.075rem;
+  font-size: var(--text-18px);
   transition: all 0.5s;
   animation: fadeIn 2s ease-in;
   font-family: sans-serif;

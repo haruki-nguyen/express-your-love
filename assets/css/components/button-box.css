@@ -1,6 +1,6 @@
 .btn {
   font-family: 'Dancing Script', cursive;
-  font-size: 1.44rem;
+  font-size: var(--text-24px);
   cursor: pointer;
   transition: all 0.5s;
   animation: fadeIn 2s ease-in;
@@ -13,6 +13,6 @@
 @media all and (min-width: 48em) {
   .btn {
     width: 500px;
-    font-size: 1.7rem;
+    font-size: var(--text-30px);
   }
 }
