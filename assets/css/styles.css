@@ -1,0 +1,150 @@
+/******************************** BASIC STYLES ********************************/
+:root {
+  --red: #dc3041;
+  --green: #20e26e;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  background: url(../images/love.jpg) no-repeat center/cover fixed;
+  line-height: 1.5;
+}
+
+p {
+  margin: 0;
+}
+/******************************** END BASIC STYLES ********************************/
+
+/******************************** GENERAL STYLES ********************************/
+.btn,
+.popup,
+.success {
+  width: 250px;
+  margin: auto;
+  padding: 10px 12px;
+  border: none;
+  background: rgba(255, 240, 213, 0.5);
+  backdrop-filter: blur(4px);
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 16px 14px 35px -3px rgba(0, 0, 0, 0.1);
+}
+/******************************** END GENERAL STYLES ********************************/
+
+/******************************** BUTTON ********************************/
+.btn {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.44rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  animation: fadeIn 2s ease-in;
+}
+
+.btn:hover {
+  transform: scale(1.11);
+}
+/******************************** END BUTTON ********************************/
+
+/******************************** POPUP ********************************/
+.popup {
+  display: none;
+  transition: all 0.5s;
+  animation: fadeIn 2s ease-in;
+  font-family: sans-serif;
+}
+
+.popup-text {
+  margin: 0 0 20px 0;
+  font-size: 1.075rem;
+}
+
+.popup-btn-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup-btn {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px 0;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.popup-btn.yes,
+.popup-btn.nont {
+  position: relative;
+}
+
+.popup-btn.yes:hover,
+.popup-btn.nont:hover {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.popup-btn.no {
+  transition: all 0.1s;
+}
+
+.popup-btn.no:hover {
+  transform: scale(1.05);
+}
+/******************************** END POPUP ********************************/
+
+/******************************** SUCCES BOX ********************************/
+.success {
+  display: none;
+  font-size: 1.075rem;
+  transition: all 0.5s;
+  animation: fadeIn 2s ease-in;
+  font-family: sans-serif;
+}
+
+.success-text {
+  padding: 8px 5px;
+}
+
+.heart-icon {
+  color: var(--red);
+}
+/******************************** END SUCCES BOX ********************************/
+
+/******************************** RESPONSIVE ********************************/
+@media all and (min-width: 48em) {
+  .btn {
+    width: 500px;
+    font-size: 1.7rem;
+  }
+
+  .popup,
+  .success {
+    width: 500px;
+  }
+
+  .popup-btn-container {
+    justify-content: space-around;
+  }
+
+  .popup-btn {
+    width: 30%;
+  }
+}
+/******************************** END RESPONSIVE ********************************/
+
+/******************************** ANIMATIONS ********************************/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/******************************** END ANIMATIONS ********************************/
