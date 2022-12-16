@@ -1,0 +1,61 @@
+.popup {
+  display: none;
+  transition: all 0.5s;
+  animation: fadeIn 2s ease-in;
+  font-family: sans-serif;
+}
+
+.popup-text {
+  margin: 0 0 20px 0;
+  font-size: 1.075rem;
+}
+
+.popup-btn-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup-btn {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px 0;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.popup-btn.yes,
+.popup-btn.nont {
+  position: relative;
+}
+
+.popup-btn.yes:hover,
+.popup-btn.nont:hover {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.popup-btn.no {
+  transition: all 0.1s;
+}
+
+.popup-btn.no:hover {
+  transform: scale(1.05);
+}
+
+@media all and (min-width: 48em) {
+  .popup {
+    width: 500px;
+  }
+
+  .popup-btn-container {
+    justify-content: space-around;
+  }
+
+  .popup-btn {
+    width: 30%;
+  }
+}

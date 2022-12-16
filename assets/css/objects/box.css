@@ -1,0 +1,11 @@
+.box {
+  width: 250px;
+  margin: auto;
+  padding: 10px 12px;
+  border: none;
+  background: rgba(255, 240, 213, 0.5);
+  backdrop-filter: blur(4px);
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 16px 14px 35px -3px rgba(0, 0, 0, 0.1);
+}

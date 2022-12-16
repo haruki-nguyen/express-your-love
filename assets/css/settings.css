@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('../fonts/Dancing-Script/DancingScript-VariableFont.ttf')
+    format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --red: #dc3041;
+  --green: #20e26e;
+}

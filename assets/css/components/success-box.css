@@ -1,0 +1,17 @@
+.success {
+  display: none;
+  font-size: 1.075rem;
+  transition: all 0.5s;
+  animation: fadeIn 2s ease-in;
+  font-family: sans-serif;
+}
+
+.success-text {
+  padding: 8px 5px;
+}
+
+@media all and (min-width: 48em) {
+  .success {
+    width: 500px;
+  }
+}
