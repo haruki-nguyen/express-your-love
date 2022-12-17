@@ -1,10 +1,12 @@
 # This is a small website project to help express your love
 
-## ⚠️ Caution
+## ⚠️ This project is under development
 
-- This webpage is currently _only_ work with devices that has a mouse (or something similar).
+- This webpage is currently _only_ work well with devices that has a mouse (or something similar).
 
 - And it will work best on large screens like laptops or desktops (because the background will cause unwanted results when your screen shrinks).
+
+- Remember to update HTML content yourself before using it.
 
 ## ✅ Todo
 
