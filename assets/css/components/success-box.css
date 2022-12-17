@@ -8,9 +8,3 @@
 .success-text {
   padding: 8px 5px;
 }
-
-@media all and (min-width: 48em) {
-  .success {
-    width: 500px;
-  }
-}

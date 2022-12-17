@@ -46,10 +46,6 @@
 }
 
 @media all and (min-width: 48em) {
-  .popup {
-    width: 500px;
-  }
-
   .popup-btn-container {
     justify-content: space-around;
   }
