@@ -6,6 +6,20 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 400;
+}
+
 :root {
   --red: #dc3041;
   --green: #20e26e;

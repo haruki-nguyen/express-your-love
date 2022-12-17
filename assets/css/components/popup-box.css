@@ -2,7 +2,6 @@
   display: none;
   transition: all 0.5s;
   animation: fadeIn 2s ease-in;
-  font-family: sans-serif;
 }
 
 .popup-text {

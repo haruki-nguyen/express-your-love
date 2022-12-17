@@ -5,4 +5,9 @@ body {
 
   line-height: 1.5;
   font-size: var(--text-18px);
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
 }
