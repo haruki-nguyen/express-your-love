@@ -75,7 +75,7 @@ mainBtn.addEventListener('click', () => {
 
         // change style to make it more contrast
         noBtn.style.backgroundColor = 'var(--red)';
-        noBtn.style.border = '1px solid var(--red)';
+        noBtn.style.color = 'white';
 
         // handle when user click before the 20th times;
         // sometimes the button only jump a very small distance,

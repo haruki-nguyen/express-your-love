@@ -34,7 +34,6 @@
 .popup-btn.yes:hover,
 .popup-btn.nont:hover {
   background-color: var(--green);
-  border: 1px solid var(--green);
 }
 
 .popup-btn.no {
