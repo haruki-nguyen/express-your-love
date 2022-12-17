@@ -7,7 +7,7 @@
 }
 
 .btn:hover {
-  transform: scale(1.11);
+  transform: scale(1.05);
 }
 
 @media all and (min-width: 48em) {
