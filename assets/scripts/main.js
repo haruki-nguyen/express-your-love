@@ -1,11 +1,14 @@
 import alwaysSuccess from './alwaysSuccess.js';
+import disableButton from './disableButton.js';
 import displayAndHideEl from './displayAndHideEl.js';
+import handleWarningOverlay from './handleWarningOverlay.js';
 
 // get nescessary element
 const mainBtn = document.querySelector('.btn');
 const yesBtn = document.querySelector('.popup-btn.yes');
 const nontBtn = document.querySelector('.popup-btn.nont');
 const noBtn = document.querySelector('.popup-btn.no');
+const overlayClose = document.querySelector('.overlay-close');
 export const popup = document.querySelector('.popup');
 export const success = document.querySelector('.success');
 
@@ -14,6 +17,14 @@ export const success = document.querySelector('.success');
 // You can upgrade this app to make the transition auto update depend on your
 // transition duration in your styles.css.
 export const transitionDuration = 500;
+
+if (!matchMedia('(pointer:fine)').matches) {
+  disableButton(noBtn);
+}
+// handle warning overlay
+overlayClose.addEventListener('click', e =>
+  handleWarningOverlay(e, transitionDuration)
+);
 
 // handle when click mainBtn
 mainBtn.addEventListener('click', () => {
