@@ -7,5 +7,11 @@
   color: #333;
   border-radius: 15px;
   box-shadow: 16px 14px 35px -3px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  max-width: 300px;
+}
+
+@media all and (min-width: 48em) {
+  .box {
+    max-width: 500px;
+  }
 }
