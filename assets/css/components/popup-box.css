@@ -1,7 +1,7 @@
 .popup {
   display: none;
   transition: all 0.5s;
-  animation: fadeIn 2s ease-in;
+  animation: fadeIn 1.5s ease;
 }
 
 .popup-text {
