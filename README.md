@@ -17,5 +17,8 @@
 - [ ] Clean code.
 - [ ] Improve the randomly jumping feature.
 - [ ] Add congratulation animation.
+- [ ] Decrease scale ratio of main button when hover.
+- [ ] Change popup-btn style when hover.
+- [ ] Increase animation-duration.
 
 ## Have a nice day, and good luck 🍀
