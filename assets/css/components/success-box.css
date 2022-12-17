@@ -2,6 +2,7 @@
   display: none;
   font-size: var(--text-18px);
   transition: all 0.5s;
+  -webkit-animation: fadeIn 1.5s ease;
   animation: fadeIn 1.5s ease;
 }
 
