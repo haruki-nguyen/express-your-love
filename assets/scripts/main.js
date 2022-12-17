@@ -16,19 +16,19 @@ export const success = document.querySelector('.success');
 // same in many place in your styles.css.
 // You can upgrade this app to make the transition auto update depend on your
 // transition duration in your styles.css.
-export const transitionDuration = 500;
+export const duration = 500;
 
 if (!matchMedia('(pointer:fine)').matches) {
   disableButton(noBtn);
 }
 // handle warning overlay
 overlayClose.addEventListener('click', e =>
-  handleWarningOverlay(e, transitionDuration)
+  handleWarningOverlay(e, duration)
 );
 
 // handle when click mainBtn
 mainBtn.addEventListener('click', () => {
-  displayAndHideEl(mainBtn, popup, transitionDuration);
+  displayAndHideEl(mainBtn, popup, duration);
   // Use setTimeout to wait for the popup display property to be 'block'
   // so the original Width won't be 0.
   setTimeout(() => {
@@ -89,13 +89,13 @@ mainBtn.addEventListener('click', () => {
       }
     }
     noBtn.addEventListener('mouseover', () => noRandJump());
-  }, transitionDuration);
+  }, duration);
 });
 
 // handle when click Yes and Non't
 yesBtn.addEventListener('click', () =>
-  displayAndHideEl(popup, success, transitionDuration)
+  displayAndHideEl(popup, success, duration)
 );
 nontBtn.addEventListener('click', () =>
-  displayAndHideEl(popup, success, transitionDuration)
+  displayAndHideEl(popup, success, duration)
 );

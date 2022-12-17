@@ -1,4 +1,4 @@
-export default function displayAndHideEl(hide, show, transitionDuration) {
+export default function displayAndHideEl(hide, show, duration) {
   // make hidding element smoothly disappear
   hide.style.opacity = 0;
 
@@ -9,5 +9,5 @@ export default function displayAndHideEl(hide, show, transitionDuration) {
     // the show element should have fadeIn animation (using opacity from 0 to 1)
     // to archive smoothest animation
     show.style.display = 'block';
-  }, transitionDuration);
+  }, duration);
 }
