@@ -32,8 +32,8 @@ mainBtn.addEventListener('click', () => {
     let counter = 0;
     let jumpTimes = 20;
 
-    // handle when click NO
-    noBtn.addEventListener('mouseover', () => {
+    // handle when mouseover NO
+    function noRandJump() {
       counter++;
       if (counter <= jumpTimes) {
         const height = noBtn.offsetHeight;
@@ -76,7 +76,8 @@ mainBtn.addEventListener('click', () => {
       } else {
         noBtn.addEventListener('click', () => alwaysSuccess(noBtn));
       }
-    });
+    }
+    noBtn.addEventListener('mouseover', () => noRandJump());
   }, transitionDuration);
 });
 
