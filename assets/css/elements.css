@@ -1,7 +1,7 @@
 body {
   display: flex;
   height: 100vh;
-  background: url('../images/love.jpg') no-repeat center/cover fixed;
+  background: url('../images/bg-mobile.jpg') no-repeat center/cover fixed;
   line-height: 1.5;
   font-size: var(--text-18px);
   font-family: 'Roboto', sans-serif;
@@ -10,4 +10,22 @@ body {
 
 button {
   font-family: 'Roboto', sans-serif;
+}
+
+@media all and (min-width: 48em) {
+  body {
+    background: url('../images/bg-tablet.jpg') no-repeat center/cover fixed;
+  }
+}
+
+@media all and (min-width: 64em) {
+  body {
+    background: url('../images/bg-laptop.jpg') no-repeat center/cover fixed;
+  }
+}
+
+@media all and (min-width: 80em) {
+  body {
+    background: url('../images/love.jpg') no-repeat center/cover fixed;
+  }
 }
