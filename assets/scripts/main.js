@@ -1,11 +1,12 @@
 import displayAndHideEl from './displayAndHideEl.js';
+
 // get nescessary element
-const mainBtn = document.querySelector(".btn");
-const popup = document.querySelector(".popup");
-const yesBtn = document.querySelector(".popup-btn.yes");
-const nontBtn = document.querySelector(".popup-btn.nont");
-const noBtn = document.querySelector(".popup-btn.no");
-const success = document.querySelector(".success");
+const mainBtn = document.querySelector('.btn');
+const popup = document.querySelector('.popup');
+const yesBtn = document.querySelector('.popup-btn.yes');
+const nontBtn = document.querySelector('.popup-btn.nont');
+const noBtn = document.querySelector('.popup-btn.no');
+const success = document.querySelector('.success');
 
 // This transition will be use multiple time so the transition duration should be the
 // same in many place in your styles.css.
@@ -16,16 +17,16 @@ const transitionDuration = 500;
 // turn NO into YES, so she will have no choice
 // I'm genius 😎, hehe.
 function alwaysSuccess() {
-  noBtn.textContent = "Yes 🥰😛😛";
-  noBtn.style.backgroundColor = "var(--green)";
-  noBtn.style.border = "1px solid var(--green)";
+  noBtn.textContent = 'Yes 🥰😛😛';
+  noBtn.style.backgroundColor = 'var(--green)';
+  noBtn.style.border = '1px solid var(--green)';
 
-  displayAndHideElement(popup, success, transitionDuration);
+  displayAndHideEl(popup, success, transitionDuration);
 }
 
 // handle when click mainBtn
-mainBtn.addEventListener("click", () => {
-  displayAndHideElement(mainBtn, popup, transitionDuration);
+mainBtn.addEventListener('click', () => {
+  displayAndHideEl(mainBtn, popup, transitionDuration);
   // Use setTimeout to wait for the popup display property to be 'block'
   // so the original Width won't be 0.
   setTimeout(() => {
@@ -41,7 +42,7 @@ mainBtn.addEventListener("click", () => {
     let jumpTimes = 20;
 
     // handle when click NO
-    noBtn.addEventListener("mouseover", () => {
+    noBtn.addEventListener('mouseover', () => {
       counter++;
       if (counter <= jumpTimes) {
         const height = noBtn.offsetHeight;
@@ -52,7 +53,7 @@ mainBtn.addEventListener("click", () => {
         const percentWidth = (origWidth / viewportWidth) * 100;
         const percentHeight = (height / viewportHeight) * 100;
 
-        noBtn.style.position = "fixed";
+        noBtn.style.position = 'fixed';
         // reset noBtn width after change position to fixed
         noBtn.style.width = `${origWidth}px`;
 
@@ -68,12 +69,12 @@ mainBtn.addEventListener("click", () => {
         }
         console.log(left, top);
 
-        noBtn.style.left = left + "%";
-        noBtn.style.top = top + "%";
+        noBtn.style.left = left + '%';
+        noBtn.style.top = top + '%';
 
         // change style to make it more contrast
-        noBtn.style.backgroundColor = "var(--red)";
-        noBtn.style.border = "1px solid var(--red)";
+        noBtn.style.backgroundColor = 'var(--red)';
+        noBtn.style.border = '1px solid var(--red)';
 
         // handle when user click before the 20th times;
         // sometimes the button only jump a very small distance,
@@ -81,18 +82,18 @@ mainBtn.addEventListener("click", () => {
         // have a change to handle
 
         // Test it many times to see the effect, about > 20 times.
-        noBtn.addEventListener("click", alwaysSuccess);
+        noBtn.addEventListener('click', alwaysSuccess);
       } else {
-        noBtn.addEventListener("click", alwaysSuccess);
+        noBtn.addEventListener('click', alwaysSuccess);
       }
     });
   }, transitionDuration);
 });
 
 // handle when click Yes and Non't
-yesBtn.addEventListener("click", () =>
-  displayAndHideElement(popup, success, transitionDuration)
+yesBtn.addEventListener('click', () =>
+  displayAndHideEl(popup, success, transitionDuration)
 );
-nontBtn.addEventListener("click", () =>
-  displayAndHideElement(popup, success, transitionDuration)
+nontBtn.addEventListener('click', () =>
+  displayAndHideEl(popup, success, transitionDuration)
 );
