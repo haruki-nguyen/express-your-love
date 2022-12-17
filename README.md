@@ -8,19 +8,21 @@
 
 ## ✅ Todo
 
-- [ ] Install the font of the main button locally.
-- [ ] Change the font and font size of the popup and the success box to make it more _aesthetic_ and _reable_.
-- [ ] Split CSS.
-- [ ] Add one more breakpoint for mobile or tablet devices.
-- [ ] Make the background responsive.
-- [ ] Research the code.
-- [ ] Clean code.
-- [ ] Add the randomly jumping feature for mobile.
-- [ ] Add congratulation animation.
-- [ ] Decrease scale ratio of main button when hover.
-- [ ] Change popup-btn style when hover.
-- [ ] Increase animation-duration.
-- [ ] Change main button font family.
-- [ ] Use css autoprefixer.
+- [x] Install the font of the main button locally.
+- [x] Change the font and font size of the popup and the success box to make it more _aesthetic_ and _reable_.
+- [x] Split CSS.
+- [x] Add one more breakpoint for mobile or tablet devices.
+- [x] Make the background responsive.
+- [x] Research the code.
+- [x] Clean code.
+- [ ] ~~Add the randomly jumping feature for mobile.~~
+- [x] Hanle logic for mobile: show warning on mobile.
+- [ ] ~~Add congratulation animation.~~
+- [x] Decrease scale ratio of main button when hover.
+- [x] Change popup-btn style when hover.
+- [x] Decrease animation-duration.
+- [ ] ~~Change main button font family.~~
+- [x] Use css autoprefixer.
+- [x] Update content.
 
 ## Have a nice day, and good luck 🍀
