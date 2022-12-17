@@ -22,9 +22,7 @@ if (!matchMedia('(pointer:fine)').matches) {
   disableButton(noBtn);
 }
 // handle warning overlay
-overlayClose.addEventListener('click', e =>
-  handleWarningOverlay(e, duration)
-);
+overlayClose.addEventListener('click', e => handleWarningOverlay(e, duration));
 
 // handle when click mainBtn
 mainBtn.addEventListener('click', () => {
