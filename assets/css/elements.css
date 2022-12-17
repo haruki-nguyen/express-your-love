@@ -1,7 +1,7 @@
 body {
   display: flex;
   height: 100vh;
-  background: url(../images/love.jpg) no-repeat center/cover fixed;
+  background: url('../images/love.jpg') no-repeat center/cover fixed;
 
   line-height: 1.5;
   font-size: var(--text-18px);
