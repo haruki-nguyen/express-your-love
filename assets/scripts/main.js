@@ -16,7 +16,7 @@ const transitionDuration = 500;
 
 // turn NO into YES, so she will have no choice
 // I'm genius 😎, hehe.
-function alwaysSuccess() {
+function alwaysSuccess(noBtn) {
   noBtn.textContent = 'Yes 🥰😛😛';
   noBtn.style.backgroundColor = 'var(--green)';
   noBtn.style.border = '1px solid var(--green)';
@@ -67,7 +67,6 @@ mainBtn.addEventListener('click', () => {
           left = left >= 100 - percentWidth ? left - percentWidth : left;
           top = top >= 100 - percentHeight ? top - percentHeight : top;
         }
-        console.log(left, top);
 
         noBtn.style.left = left + '%';
         noBtn.style.top = top + '%';
@@ -82,9 +81,9 @@ mainBtn.addEventListener('click', () => {
         // have a change to handle
 
         // Test it many times to see the effect, about > 20 times.
-        noBtn.addEventListener('click', alwaysSuccess);
+        noBtn.addEventListener('click', () => alwaysSuccess(noBtn));
       } else {
-        noBtn.addEventListener('click', alwaysSuccess);
+        noBtn.addEventListener('click', () => alwaysSuccess(noBtn));
       }
     });
   }, transitionDuration);
