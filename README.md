@@ -20,5 +20,6 @@
 - [ ] Decrease scale ratio of main button when hover.
 - [ ] Change popup-btn style when hover.
 - [ ] Increase animation-duration.
+- [ ] Change main button font family
 
 ## Have a nice day, and good luck 🍀
