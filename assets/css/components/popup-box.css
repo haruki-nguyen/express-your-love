@@ -21,7 +21,7 @@
   background: none;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  font-size: var(--text-14px);
+  font-size: var(--text-16px);
   cursor: pointer;
   transition: all 0.3s;
 }
