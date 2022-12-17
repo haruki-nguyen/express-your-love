@@ -15,7 +15,7 @@
 - [ ] Make the background responsive.
 - [ ] Research the code.
 - [ ] Clean code.
-- [ ] Improve the randomly jumping feature.
+- [ ] Add the randomly jumping feature for mobile.
 - [ ] Add congratulation animation.
 - [ ] Decrease scale ratio of main button when hover.
 - [ ] Change popup-btn style when hover.
