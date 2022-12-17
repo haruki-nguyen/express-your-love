@@ -1,3 +1,4 @@
+import displayAndHideEl from './displayAndHideEl.js';
 // get nescessary element
 const mainBtn = document.querySelector(".btn");
 const popup = document.querySelector(".popup");
@@ -11,20 +12,6 @@ const success = document.querySelector(".success");
 // You can upgrade this app to make the transition auto update depend on your
 // transition duration in your styles.css.
 const transitionDuration = 500;
-
-function displayAndHideElement(hide, show, transitionDuration) {
-  // make hidding element smoothly disappear
-  hide.style.opacity = 0;
-
-  // wait for the transition duration to compelte
-  setTimeout(() => {
-    hide.style.display = "none";
-
-    // the show element should have fadeIn animation (using opacity from 0 to 1)
-    // to archive smoothest animation
-    show.style.display = "block";
-  }, transitionDuration);
-}
 
 // turn NO into YES, so she will have no choice
 // I'm genius 😎, hehe.
