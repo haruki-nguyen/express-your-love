@@ -1,28 +1,19 @@
+import alwaysSuccess from './alwaysSuccess.js';
 import displayAndHideEl from './displayAndHideEl.js';
 
 // get nescessary element
 const mainBtn = document.querySelector('.btn');
-const popup = document.querySelector('.popup');
 const yesBtn = document.querySelector('.popup-btn.yes');
 const nontBtn = document.querySelector('.popup-btn.nont');
 const noBtn = document.querySelector('.popup-btn.no');
-const success = document.querySelector('.success');
+export const popup = document.querySelector('.popup');
+export const success = document.querySelector('.success');
 
 // This transition will be use multiple time so the transition duration should be the
 // same in many place in your styles.css.
 // You can upgrade this app to make the transition auto update depend on your
 // transition duration in your styles.css.
-const transitionDuration = 500;
-
-// turn NO into YES, so she will have no choice
-// I'm genius 😎, hehe.
-function alwaysSuccess(noBtn) {
-  noBtn.textContent = 'Yes 🥰😛😛';
-  noBtn.style.backgroundColor = 'var(--green)';
-  noBtn.style.border = '1px solid var(--green)';
-
-  displayAndHideEl(popup, success, transitionDuration);
-}
+export const transitionDuration = 500;
 
 // handle when click mainBtn
 mainBtn.addEventListener('click', () => {
