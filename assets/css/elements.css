@@ -26,6 +26,6 @@ button {
 
 @media all and (min-width: 80em) {
   body {
-    background: url('../images/love.jpg') no-repeat center/cover fixed;
+    background: url('../images/bg.jpg') no-repeat center/cover fixed;
   }
 }
