@@ -26,5 +26,6 @@
 - [ ] ~~Change main button font family.~~
 - [x] Use css autoprefixer.
 - [x] Update content.
+- [ ] Remove the logic that make the button stop jumping.
 
 ## Have a nice day, and good luck 🍀
