@@ -1,16 +1,16 @@
-import alwaysSuccess from './alwaysSuccess.js';
-import disableButton from './disableButton.js';
-import displayAndHideEl from './displayAndHideEl.js';
-import handleWarningOverlay from './handleWarningOverlay.js';
+import alwaysSuccess from "./alwaysSuccess.js";
+import disableButton from "./disableButton.js";
+import displayAndHideEl from "./displayAndHideEl.js";
+import handleWarningOverlay from "./handleWarningOverlay.js";
 
 // get nescessary element
-const mainBtn = document.querySelector('.btn');
-const yesBtn = document.querySelector('.popup-btn.yes');
-const nontBtn = document.querySelector('.popup-btn.nont');
-const noBtn = document.querySelector('.popup-btn.no');
-const overlayClose = document.querySelector('.overlay-close');
-export const popup = document.querySelector('.popup');
-export const success = document.querySelector('.success');
+const mainBtn = document.querySelector(".btn");
+const yesBtn = document.querySelector(".popup-btn.yes");
+const nontBtn = document.querySelector(".popup-btn.nont");
+const noBtn = document.querySelector(".popup-btn.no");
+const overlayClose = document.querySelector(".overlay-close");
+export const popup = document.querySelector(".popup");
+export const success = document.querySelector(".success");
 
 // This transition will be use multiple time so the transition duration should be the
 // same in many place in your styles.css.
@@ -18,14 +18,16 @@ export const success = document.querySelector('.success');
 // transition duration in your styles.css.
 export const duration = 500;
 
-if (!matchMedia('(pointer:fine)').matches) {
+if (!matchMedia("(pointer:fine)").matches) {
   disableButton(noBtn);
 }
 // handle warning overlay
-overlayClose.addEventListener('click', e => handleWarningOverlay(e, duration));
+overlayClose.addEventListener("click", (e) =>
+  handleWarningOverlay(e, duration)
+);
 
 // handle when click mainBtn
-mainBtn.addEventListener('click', () => {
+mainBtn.addEventListener("click", () => {
   displayAndHideEl(mainBtn, popup, duration);
   // Use setTimeout to wait for the popup display property to be 'block'
   // so the original Width won't be 0.
@@ -53,7 +55,7 @@ mainBtn.addEventListener('click', () => {
         const percentWidth = (origWidth / viewportWidth) * 100;
         const percentHeight = (height / viewportHeight) * 100;
 
-        noBtn.style.position = 'fixed';
+        noBtn.style.position = "fixed";
         // reset noBtn width after change position to fixed
         noBtn.style.width = `${origWidth}px`;
 
@@ -68,12 +70,12 @@ mainBtn.addEventListener('click', () => {
           top = top >= 100 - percentHeight ? top - percentHeight : top;
         }
 
-        noBtn.style.left = left + '%';
-        noBtn.style.top = top + '%';
+        noBtn.style.left = left + "%";
+        noBtn.style.top = top + "%";
 
         // change style to make it more contrast
-        noBtn.style.backgroundColor = 'var(--red)';
-        noBtn.style.color = 'white';
+        noBtn.style.backgroundColor = "var(--red)";
+        noBtn.style.color = "white";
 
         // handle when user click before the 20th times;
         // sometimes the button only jump a very small distance,
@@ -81,19 +83,19 @@ mainBtn.addEventListener('click', () => {
         // have a change to handle
 
         // Test it many times to see the effect, about > 20 times.
-        noBtn.addEventListener('click', () => alwaysSuccess(noBtn));
+        noBtn.addEventListener("click", () => alwaysSuccess(noBtn));
       } else {
-        noBtn.addEventListener('click', () => alwaysSuccess(noBtn));
+        noBtn.addEventListener("click", () => alwaysSuccess(noBtn));
       }
     }
-    noBtn.addEventListener('mouseover', () => noRandJump());
+    noBtn.addEventListener("mouseover", () => noRandJump());
   }, duration);
 });
 
 // handle when click Yes and Non't
-yesBtn.addEventListener('click', () =>
+yesBtn.addEventListener("click", () =>
   displayAndHideEl(popup, success, duration)
 );
-nontBtn.addEventListener('click', () =>
+nontBtn.addEventListener("click", () =>
   displayAndHideEl(popup, success, duration)
 );
