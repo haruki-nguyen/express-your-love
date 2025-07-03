@@ -1,31 +1,85 @@
-# This is a small website project to help express your love
+# 💌 Express Your Love – Interactive Web Invitation
 
-## ⚠️ This project is under development
+A playful, heartfelt web app designed to help you express your feelings in a fun and memorable way. This project creates an interactive experience where the recipient is gently (and humorously) encouraged to accept your invitation, with delightful UI touches and a charming, personalized message.
 
-- This webpage is currently _only_ work well with devices that has a mouse (or something similar).
+---
 
-- And it will work best on large screens like laptops or desktops (because the background will cause unwanted results when your screen shrinks).
+## ✨ Features
 
-- Remember to update HTML content yourself before using it.
+- **Playful Main Button:** A beautiful, animated button invites the recipient to answer your question.
+- **Popup Dialog:** Presents a heartfelt message and three choices ("Yes", "Non't", and "No").
+- **Jumping 'No' Button:** The "No" button playfully jumps away, making it hard to click and encouraging a positive answer.
+- **Success Message:** A warm congratulatory popup appears when the recipient accepts (or eventually clicks "No").
+- **Responsive Backgrounds:** Custom backgrounds for different screen sizes (mobile, tablet, laptop, desktop).
+- **Custom Fonts:** Uses locally hosted 'Dancing Script' and 'Roboto' fonts for a unique, elegant look.
+- **Mobile Warning:** Shows a warning overlay on devices without a mouse, as the experience is best on desktop.
+- **Modular, Clean Code:** CSS and JS are split into logical modules for easy customization and maintenance.
 
-## ✅ Todo
+---
 
-- [x] Install the font of the main button locally.
-- [x] Change the font and font size of the popup and the success box to make it more _aesthetic_ and _reable_.
-- [x] Split CSS.
-- [x] Add one more breakpoint for mobile or tablet devices.
-- [x] Make the background responsive.
-- [x] Research the code.
-- [x] Clean code.
-- [ ] ~~Add the randomly jumping feature for mobile.~~
-- [x] Hanle logic for mobile: show warning on mobile.
-- [ ] ~~Add congratulation animation.~~
-- [x] Decrease scale ratio of main button when hover.
-- [x] Change popup-btn style when hover.
-- [x] Decrease animation-duration.
-- [ ] ~~Change main button font family.~~
-- [x] Use css autoprefixer.
-- [x] Update content.
-- [ ] Remove the logic that make the button stop jumping.
+## 🖥️ How It Works
 
-## Have a nice day, and good luck 🍀
+1. The recipient clicks the main button to open a popup with your personalized message.
+2. They are presented with three choices:
+   - **Yes** or **Non't**: Both lead to a congratulatory message.
+   - **No**: The button jumps away up to 20 times, making it hard to refuse. Eventually, clicking "No" also leads to the congratulatory message.
+3. On mobile or touch devices, a warning overlay appears, as the playful experience is designed for mouse users.
+
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5** – Semantic, accessible markup
+- **CSS3** – Modular, layered styles (with custom fonts and responsive backgrounds)
+- **JavaScript (ES6 Modules)** – Handles interactivity and playful logic
+- **Assets:**
+  - Fonts: 'Dancing Script' and 'Roboto' (in `assets/fonts/`)
+  - Images: Responsive backgrounds (in `assets/images/`)
+  - Favicon and manifest (in `assets/favicon/`)
+
+---
+
+## 📁 Project Structure
+
+```txt
+assets/
+  css/           # Modular CSS (settings, elements, objects, components)
+  fonts/         # Dancing Script & Roboto font files
+  images/        # Background images for different devices
+  scripts/       # Modular JavaScript files
+  favicon/       # Favicon and manifest
+index.html       # Main HTML file
+```
+
+---
+
+## 📝 Customization
+
+- **Change the Question/Message:**
+  - Edit the main button text and popup message in `index.html`.
+- **Update Backgrounds:**
+  - Replace images in `assets/images/` for a different look.
+- **Fonts:**
+  - Add or swap font files in `assets/fonts/` and update `assets/css/settings.css` as needed.
+- **Colors & Styles:**
+  - Adjust variables and styles in the CSS files for your preferred theme.
+
+---
+
+## ⚠️ Limitations
+
+- **Best on Desktop:** The interactive experience is designed for devices with a mouse. On mobile/touch devices, a warning is shown and the main feature is disabled.
+- **Screen Size:** Works best on larger screens (laptop/desktop). Some background effects may not display as intended on small screens.
+
+---
+
+## 🚧 Development Status & Todo
+
+- This project is under active development. See the checklist below for progress and planned features.
+
+---
+
+## 💡 Tips
+
+- Update the HTML content to personalize your message before sharing.
+- For best results, use on a desktop or laptop with a mouse.
