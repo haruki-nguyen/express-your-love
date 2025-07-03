@@ -1,0 +1,236 @@
+@layer settings {
+  @font-face {
+    font-family: Dancing Script;
+    src: url("DancingScript-VariableFont.486f76a5.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: Roboto;
+    src: url("Roboto-Regular.05f4349b.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: Roboto;
+    src: url("Roboto-Italic.16706b4c.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  :root {
+    --red: #dc2626;
+    --green: #a7f3d0;
+    --text-14px: .875rem;
+    --text-16px: 1rem;
+    --text-18px: 1.125rem;
+    --text-20px: 1.25rem;
+    --text-24px: 1.5rem;
+    --text-30px: 1.875rem;
+  }
+}
+
+@layer generic {
+  html {
+    box-sizing: border-box;
+  }
+
+  body {
+    box-sizing: inherit;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+@layer elements {
+  body {
+    height: 100vh;
+    line-height: 1.5;
+    font-size: var(--text-18px);
+    background: url("bg-mobile.b9339845.jpg") center / cover no-repeat fixed;
+    padding: 0 15px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+  }
+
+  button {
+    font-family: Roboto, sans-serif;
+  }
+
+  @media (width >= 48em) {
+    body {
+      background: url("bg-tablet.d71211b7.jpg") center / cover no-repeat fixed;
+    }
+  }
+
+  @media (width >= 64em) {
+    body {
+      background: url("bg-laptop.05ce1294.jpg") center / cover no-repeat fixed;
+    }
+  }
+
+  @media (width >= 80em) {
+    body {
+      background: url("bg.fcbd7469.jpg") center / cover no-repeat fixed;
+    }
+  }
+}
+
+@layer objects {
+  .box {
+    color: #333;
+    background: #fff0d5cc;
+    border: none;
+    border-radius: 15px;
+    max-width: 300px;
+    margin: auto;
+    padding: 10px 12px;
+    box-shadow: 16px 14px 35px -3px #0000001a;
+  }
+
+  @media (width >= 48em) {
+    .box {
+      min-width: 400px;
+      max-width: 500px;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    font-family: Dancing Script, cursive;
+    font-size: var(--text-24px);
+    cursor: pointer;
+    transition: all .5s;
+    animation: 1.5s fade-in;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+
+  @media (width >= 48em) {
+    .btn {
+      font-size: var(--text-30px);
+    }
+  }
+
+  .popup {
+    transition: all .5s;
+    animation: 1.5s fade-in;
+    display: none;
+  }
+
+  .popup-text {
+    text-align: center;
+    font-size: var(--text-18px);
+    margin: 0 0 20px;
+  }
+
+  .popup-btn-container {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .popup-btn {
+    width: 100%;
+    font-size: var(--text-16px);
+    cursor: pointer;
+    background: none;
+    border: 1px solid #0000004d;
+    border-radius: 20px;
+    margin: 8px 0;
+    padding: 10px 0;
+    transition: all .3s;
+  }
+
+  .popup-btn.yes, .popup-btn.nont {
+    position: relative;
+  }
+
+  .popup-btn.yes:hover, .popup-btn.nont:hover {
+    background-color: var(--green);
+  }
+
+  .popup-btn.no {
+    transition: all .1s;
+  }
+
+  .popup-btn.no:hover {
+    transform: scale(1.05);
+  }
+
+  @media (width >= 48em) {
+    .popup-btn-container {
+      justify-content: space-around;
+    }
+
+    .popup-btn {
+      width: 30%;
+    }
+  }
+
+  .success {
+    font-size: var(--text-18px);
+    transition: all .5s;
+    animation: 1.5s fadeIn;
+    display: none;
+  }
+
+  .success-text {
+    padding: 8px 5px;
+  }
+
+  .overlay {
+    transition: opacity .5s;
+    display: none;
+  }
+
+  @media not (pointer: fine) {
+    .overlay {
+      z-index: 999;
+      color: #fff;
+      background-color: #000000e6;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      position: fixed;
+      inset: 0;
+    }
+
+    .overlay-text {
+      backdrop-filter: blur(4px);
+      background: #fff0d580;
+      border-radius: 15px;
+      margin: 0 30px;
+      padding: 10px 20px;
+    }
+
+    .overlay-close {
+      color: #fff;
+      font-size: var(--text-30px);
+      background-color: #0000;
+      border: none;
+      padding: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+/*# sourceMappingURL=express-your-love.1f373376.css.map */
