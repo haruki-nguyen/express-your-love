@@ -3,6 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A heartfelt interactive web app invitation."
+    />
+    <meta name="theme-color" content="#ffb6c1" />
+    <!-- Preload main font (example, adjust path as needed) -->
+    <link
+      rel="preload"
+      href="assets/fonts/your-main-font.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
     <!-- favicon link -->
     <link
@@ -24,21 +37,35 @@
     />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
     <!-- end favicon link -->
-
-    <script src="assets/scripts/main.js" type="module"></script>
+    <!-- Consider adding canonical link for SEO if needed -->
+    <!-- <link rel="canonical" href="https://yourdomain.com/" /> -->
+    <script src="assets/scripts/main.js" type="module" defer></script>
     <title>Be my life 🥰</title>
   </head>
   <body>
     <!-- main button -->
-    <button class="btn box" type="button">
+    <button
+      class="btn box"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="main-popup"
+    >
       Này cô gái dễ thương với đôi má đồng tiền, em có thể trở thành nửa kia của
       tôi không?
     </button>
     <!-- end main button -->
 
     <!-- popup -->
-    <div class="popup box">
-      <p class="popup-text">
+    <div
+      class="popup box"
+      id="main-popup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popup-title"
+      tabindex="-1"
+      hidden
+    >
+      <p class="popup-text" id="popup-title">
         Tôi không thể nhớ được quá khứ của mình, nhưng tôi biết mình đã
         <em>khốn nạn</em>
         như thế nào. Tuy nhiên, vì không thể thay đổi quá khứ, nên tôi mong hiện
@@ -55,26 +82,45 @@
     <!-- end popup -->
 
     <!-- success popup -->
-    <div class="success box">
-      <p class="success-text">
-        Cảm ơn em vì đã đồng ý <span class="heart-icon">&hearts;</span>, và chào
+    <div
+      class="success box"
+      role="alertdialog"
+      aria-modal="true"
+      aria-labelledby="success-title"
+      tabindex="-1"
+      hidden
+    >
+      <p class="success-text" id="success-title">
+        Cảm ơn em vì đã đồng ý
+        <span class="heart-icon" aria-hidden="true">&hearts;</span>, và chào
         mừng em đến với thế giới của tôi. Chúc cho em và tôi sẽ luôn khỏe mạnh,
         vui vẻ, hạnh phúc. Chúc cho cả hai sẽ có một tương lai thật tốt đẹp, một
         cuộc sống nhẹ nhàng và yên bình, cùng với những kỉ niệm không thể nào
         quên. Cuối cùng, tôi muốn chúc cho mối tình của chúng ta thật ý nghĩa và
-        hạnh phúc 🍀 <span class="heart-icon">&hearts;</span>.
+        hạnh phúc 🍀
+        <span class="heart-icon" aria-hidden="true">&hearts;</span>.
       </p>
     </div>
     <!-- end success popup -->
 
     <!-- warn overlay -->
-    <div class="overlay">
+    <div class="overlay" role="alert" aria-live="assertive" hidden>
       <p class="overlay-text">
         ⚠️ Sorry, this website currently only works on devices with mouse
         support.
       </p>
-      <button class="overlay-close" type="button">X</button>
+      <button class="overlay-close" type="button" aria-label="Close warning">
+        X
+      </button>
     </div>
     <!-- end warn overlay -->
+    <!--
+      Further recommendations:
+      - Optimize and minify CSS/JS for production.
+      - Use modern image formats (WebP/AVIF) in assets/images/.
+      - Subset fonts in assets/fonts/ to only needed glyphs.
+      - Consider a build tool for asset bundling and cache busting.
+      - Set HTTP headers for security (CSP, X-Content-Type-Options, etc.).
+    -->
   </body>
 </html>
