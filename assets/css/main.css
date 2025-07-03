@@ -1,5 +1,5 @@
-@import 'settings.css' layer(settings);
-@import 'generic.css' layer(generic);
-@import 'elements.css' layer(elements);
-@import 'objects/main.css' layer(objects);
-@import 'components/main.css' layer(components);
+@import url('settings.css') layer(settings);
+@import url('generic.css') layer(generic);
+@import url('elements.css') layer(elements);
+@import url('objects/main.css') layer(objects);
+@import url('components/main.css') layer(components);

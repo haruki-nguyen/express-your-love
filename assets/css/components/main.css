@@ -1,4 +1,4 @@
-@import 'button-box.css';
-@import 'popup-box.css';
-@import 'success-box.css';
-@import 'warn-overlay.css';
+@import url('button-box.css');
+@import url('popup-box.css');
+@import url('success-box.css');
+@import url('warn-overlay.css');

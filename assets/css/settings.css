@@ -7,14 +7,14 @@
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: Roboto;
   src: url('../fonts/Roboto/Roboto-Italic.ttf') format('truetype');
   font-style: italic;
   font-weight: 400;
@@ -23,7 +23,6 @@
 :root {
   --red: #dc2626;
   --green: #a7f3d0;
-
   --text-14px: 0.875rem;
   --text-16px: 1rem;
   --text-18px: 1.125rem;

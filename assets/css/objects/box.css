@@ -2,14 +2,14 @@
   margin: auto;
   padding: 10px 12px;
   border: none;
-  background: rgba(255, 240, 213, 0.5);
+  background: rgb(255 240 213 / 80%);
   color: #333;
   border-radius: 15px;
-  box-shadow: 16px 14px 35px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 16px 14px 35px -3px rgb(0 0 0 / 10%);
   max-width: 300px;
 }
 
-@media all and (min-width: 48em) {
+@media all and (width >= 48em) {
   .box {
     min-width: 400px;
     max-width: 500px;

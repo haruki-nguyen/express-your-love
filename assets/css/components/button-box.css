@@ -1,17 +1,16 @@
 .btn {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: var(--text-24px);
   cursor: pointer;
   transition: all 0.5s;
-  -webkit-animation: fadeIn 1.5s ease;
-  animation: fadeIn 1.5s ease;
+  animation: fade-in 1.5s ease;
 }
 
 .btn:hover {
   transform: scale(1.05);
 }
 
-@media all and (min-width: 48em) {
+@media (width >= 48em) {
   .btn {
     font-size: var(--text-30px);
   }

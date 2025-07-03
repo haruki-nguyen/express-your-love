@@ -4,27 +4,27 @@ body {
   background: url('../images/bg-mobile.jpg') no-repeat center/cover fixed;
   line-height: 1.5;
   font-size: var(--text-18px);
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   padding: 0 15px;
 }
 
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
-@media all and (min-width: 48em) {
+@media all and (width >= 48em) {
   body {
     background: url('../images/bg-tablet.jpg') no-repeat center/cover fixed;
   }
 }
 
-@media all and (min-width: 64em) {
+@media all and (width >= 64em) {
   body {
     background: url('../images/bg-laptop.jpg') no-repeat center/cover fixed;
   }
 }
 
-@media all and (min-width: 80em) {
+@media all and (width >= 80em) {
   body {
     background: url('../images/bg.jpg') no-repeat center/cover fixed;
   }

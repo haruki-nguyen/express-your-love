@@ -1,3 +1,4 @@
-export default function disableButton(btn) {
+const disableButton = (btn) => {
   btn.disabled = true;
-}
+};
+export default disableButton;
