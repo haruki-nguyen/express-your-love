@@ -22,3 +22,6 @@ yarn-error.log*
 # Optional: environment files
 .env
 .env.*
+
+# Parcel build output
+.parcel-cache/

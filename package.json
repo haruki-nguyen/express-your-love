@@ -1,0 +1,18 @@
+{
+  "name": "express-your-love",
+  "version": "1.0.0",
+  "description": "A playful, heartfelt web app designed to help you express your feelings in a fun and memorable way. This project creates an interactive experience where the recipient is gently (and humorously) encouraged to accept your invitation, with delightful UI touches and a charming, personalized message.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.15.4",
+    "@parcel/transformer-webmanifest": "^2.15.4",
+    "parcel": "^2.15.4"
+  }
+}
